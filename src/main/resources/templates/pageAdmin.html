@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+	</head>
+<body>
+<header>
+   <div class="logo">
+	   <h1><img alt="" src="/images/logo.png" id="logo"></h1>
+   </div>
+    <nav id="l">
+       <div id="men">
+        <span><a th:href="@{eleve}">GESTION PRODUITS</a></span>
+        <div id="sous">
+          <span>  <a th:href="@{voiture}">AJOUTER PRODUITS</a></span>
+        </div>
+        <div id="sous">
+          <span>  <a th:href="@{rechercheVoiture}">RECHERCHE PRODUITS</a></span>
+        </div>
+      </div>
+     <div id="men">
+        <span><a>Gestion Vendeur</a></span>
+        <div id="sous">
+          <span>  <a th:href="@{vendeur}">AJOUTER</a></span>
+        </div>
+        <div id="sous">
+          <span>  <a th:href="@{rechercherVendeur}">Recherche</a></span>
+        </div>
+      </div> 
+       <div id="men">
+        <span><a href="">Gestion Model</a></span>
+        <div id="sous">
+          <span>  <a th:href="@{model}">AJOUTER</a></span>
+        </div>
+      </div>  
+       
+   </nav>
+ </header>
+  <div class="page1">
+    <h1> VOUS ETES CONNECTEZ EN TANT QUE </h1>
+    <h1 th:text="${p.nom}"></h1>
+    <h1 th:text="${p.prenom}"></h1>
+    
+      
+   </div>
+   <footer>
+  <center>
+	 <h1> ADMINISTRATEUR </h1>
+     <hr>
+		
+	</center>
+</footer>
+ </body>
+</html>
